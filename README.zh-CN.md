@@ -13,7 +13,7 @@
 ## 目录结构
 
 ```
-repo-readme/
+repo-readme-skill/
 ├── SKILL.md                          # skill 主体：工作流、硬规则、仓库类型判定
 ├── references/
 │   ├── description-topics.md         # 描述六句式 + topics 五层配方
@@ -34,9 +34,9 @@ repo-readme/
 ## 安装（作为 agent skill）
 
 ```bash
-git clone https://github.com/MicTx/repo-readme.git
+git clone https://github.com/MicTx/repo-readme-skill.git
 mkdir -p ~/.agents/skills
-cp -R repo-readme ~/.agents/skills/repo-docs-standard
+cp -R repo-readme-skill ~/.agents/skills/repo-docs-standard
 ```
 
 然后对 agent 说「按规范体检这个 README」「帮我重写仓库描述」即可；也可直接跑审计脚本：

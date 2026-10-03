@@ -13,7 +13,7 @@ Most README guidance is either a vague checklist ("add badges!") or a rigid spec
 ## What's inside
 
 ```
-repo-readme/
+repo-readme-skill/
 ├── SKILL.md                          # the skill: workflow, hard rules, repo-type detection
 ├── references/
 │   ├── description-topics.md         # 6 description formulas + 5-layer topics recipe
@@ -34,9 +34,9 @@ repo-readme/
 ## Install (as an agent skill)
 
 ```bash
-git clone https://github.com/MicTx/repo-readme.git
+git clone https://github.com/MicTx/repo-readme-skill.git
 mkdir -p ~/.agents/skills
-cp -R repo-readme ~/.agents/skills/repo-docs-standard
+cp -R repo-readme-skill ~/.agents/skills/repo-docs-standard
 ```
 
 Then ask your agent things like "audit this repo's README" or "rewrite my About description" — or run the audit directly:
