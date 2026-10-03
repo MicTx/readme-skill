@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""repo-docs-standard 审计脚本：对 README 做硬指标检查。
+"""repo-readme-skill 审计脚本：对 README 做硬指标检查。
 
 用法:
     python audit.py <README路径> [--desc "GitHub About 描述"] [--name user/repo] [--root 仓库根目录]

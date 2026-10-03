@@ -1,4 +1,4 @@
-# Repo Docs Standard
+# repo-readme-skill
 
 **一套从 12 个 T0 级开源仓库蒸馏出的仓库描述文档规范：README、About、topics。**
 
@@ -36,7 +36,7 @@ repo-readme-skill/
 ```bash
 git clone https://github.com/MicTx/repo-readme-skill.git
 mkdir -p ~/.agents/skills
-cp -R repo-readme-skill ~/.agents/skills/repo-docs-standard
+cp -R repo-readme-skill ~/.agents/skills/
 ```
 
 然后对 agent 说「按规范体检这个 README」「帮我重写仓库描述」即可；也可直接跑审计脚本：

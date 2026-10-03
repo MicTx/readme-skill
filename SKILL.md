@@ -1,5 +1,5 @@
 ---
-name: repo-docs-standard
+name: repo-readme-skill
 description: >
   开源仓库描述类文档规范：按 GitHub 官方规则 + T0 级仓库（React/Vite/FastAPI/Ollama/ripgrep/
   PocketBase/Immich 等 12 个范本）蒸馏的写法标准，审查或撰写 README、仓库 About 描述、topics、
@@ -66,7 +66,7 @@ description: >
 ## 三处一致性检查（脚本可做）
 
 ```bash
-python ~/.agents/skills/repo-docs-standard/scripts/audit.py <README路径> [--desc "About描述"] [--name 包名]
+python ~/.agents/skills/repo-readme-skill/scripts/audit.py <README路径> [--desc "About描述"] [--name 包名]
 ```
 
 输出 JSON：字数、首段长度、绝对链接、死链风险（相对路径核对）、`> `开头、缺失关键章节。

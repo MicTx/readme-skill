@@ -1,4 +1,4 @@
-# Repo Docs Standard
+# repo-readme-skill
 
 **A distilled standard for repo description docs: README, About, topics — learned from 12 top-tier OSS repos.**
 
@@ -36,7 +36,7 @@ repo-readme-skill/
 ```bash
 git clone https://github.com/MicTx/repo-readme-skill.git
 mkdir -p ~/.agents/skills
-cp -R repo-readme-skill ~/.agents/skills/repo-docs-standard
+cp -R repo-readme-skill ~/.agents/skills/
 ```
 
 Then ask your agent things like "audit this repo's README" or "rewrite my About description" — or run the audit directly:
