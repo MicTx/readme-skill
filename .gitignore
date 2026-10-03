@@ -1,0 +1,5 @@
+# rebuild locally, never commit (sample READMEs keep their own licenses)
+corpus/
+__pycache__/
+*.pyc
+.DS_Store

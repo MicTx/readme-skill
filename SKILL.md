@@ -1,0 +1,95 @@
+---
+name: repo-docs-standard
+description: >
+  开源仓库描述类文档规范：按 GitHub 官方规则 + T0 级仓库（React/Vite/FastAPI/Ollama/ripgrep/
+  PocketBase/Immich 等 12 个范本）蒸馏的写法标准，审查或撰写 README、仓库 About 描述、topics、
+  LICENSE/CONTRIBUTING 等社区健康文件。凡用户提到 README 写法/改写/审查、仓库描述、repo 简介、
+  topics 标签、开源规范、文档门面、准备开源、上架 GitHub —— 即使用户没说"规范"二字，也用本 skill。
+---
+
+# 仓库描述文档规范
+
+把仓库的对外门面（README + About 描述 + topics + 社区文件）按 T0 开源仓库的标准整治。
+
+## 核心原则（先读懂再动手）
+
+1. **README 是路由器不是百科**。T0 仓库的共识：README 只回答三件事——这是什么、值不值得用、
+   30 分钟内怎么跑起来。所有深入内容路由到文档站、GUIDE.md、docs/ 目录。篇幅与文档站成反比：
+   有 docs 站的 Vite/React 只有 3–5KB，无 docs 站的 ripgrep/fzf 才把 README 写成 20–40KB 的文档本体。
+2. **三处描述一致**：GitHub About 字段 = README 首段 = 包管理器 description（npm/PyPI/crates）。
+   standard-readme 要求短简介 < 120 字符，T0 实际范围 35–120 字符。
+3. **诚实高于营销**。性能声明给基准链接（ripgrep 的对比表注明机器和"单一基准不够"），估算值加脚注
+   （FastAPI 的 200%–300% 标注"internal team 估算"），未到 v1 的承诺写 WARNING（PocketBase、Immich 的备份提醒）。
+4. **用户视角分段**。Pake 的 Getting Started 按"新手→开发者→高级用户→故障排查"四类人各给一条路。
+   面向人的动线，不是面向模块的目录。
+
+## 工作流
+
+### 第一步：判定场景
+
+用户要的是哪种？不确定就问一句。
+
+- **A 审查/体检**：已有 README/描述，按标准打分并给修改清单 → 读 `references/checklist.md`，逐条核对，
+  产出「通过/问题（证据+改法）」报告。能跑脚本就先跑 `scripts/audit.py` 拿硬指标。
+- **B 撰写/重写**：从零写或大改 → 识别仓库类型，读 `references/templates.md` 对应模板起稿，
+  再过一遍 checklist。
+- **C 只弄门面**：只改 About 描述/topics → 读 `references/description-topics.md`，直接给文案。
+
+### 第二步：识别仓库类型（选错模板全盘皆错）
+
+| 类型 | 判定特征 | 结构基调 |
+|---|---|---|
+| 应用/自托管服务 | 有 Docker/部署章节，用户是运维者 | 功能表 + 部署 + demo 门票 |
+| CLI 工具 | 装完在终端敲命令 | 安装(分平台) + 大量可复制示例 |
+| 库/框架 | 发 npm/PyPI/Maven，用户写代码 import | 特性列表 + 最小可运行示例 + 文档链接 |
+| 模型/AI 应用 | 模型名、prompt、agent | 快速启动 + API 示例 + 生态集成 |
+| UI 组件库 | 组件、设计语言 | 环境支持 + install + usage + 全套链接 |
+
+详见 `references/templates.md`。
+
+### 第三步：产出
+
+- 审查报告：每条问题附「证据（原文引用）→ 为什么违反 → 具体改法（给出改后文案）」。
+- 新文档：直接给出完整可粘贴的 Markdown/描述文案，不要只给"建议加上 XX"。
+- 中文项目的 README：默认双语策略——`README.md` 英文（standard-readme 规定英文占主名）+
+  `README.zh-CN.md`，顶部互链（参考 Pake/Immich 的语言切换行）。用户明确只要中文时可用
+  `README.md` 单文件中文，但 About 描述仍建议英文。
+
+## 硬性规则（GitHub 官方，违反会实际出问题）
+
+- 文件名 `README`（建议 `README.md`），放根目录 / `docs/` / `.github/`；同存时优先级 `.github` > 根 > `docs`
+- 渲染超过 500 KiB 截断；链接用相对路径（绝对链接 clone 后会死）
+- topics：仅小写字母/数字/连字符，单个 ≤ 50 字符，每仓库 ≤ 20 个；**私有仓库的 topics 也是公开的**
+- 短简介（About 与 README 首段）< 120 字符，独占一行，不以 `> ` 开头
+- README 超过 100 行应有目录（standard-readme）；GitHub 会按标题自动生成大纲
+
+## 三处一致性检查（脚本可做）
+
+```bash
+python ~/.agents/skills/repo-docs-standard/scripts/audit.py <README路径> [--desc "About描述"] [--name 包名]
+```
+
+输出 JSON：字数、首段长度、绝对链接、死链风险（相对路径核对）、`> `开头、缺失关键章节。
+审查场景先跑脚本拿硬指标，再人工按 checklist 深审。
+
+## 范本索引
+
+12 个 T0 范本对照表如下。本仓库版不随附语料快照（范本版权归各自项目）；需要离线对照原文时，
+在仓库根目录跑 `python3 scripts/fetch_corpus.py` 重建到 `corpus/`（已 gitignore，勿再分发）。
+
+| 范本 | 学什么 |
+|---|---|
+| Vite / React | 有文档站时的极简门面结构 |
+| FastAPI | 特性卖点写法（动词开头+量化+脚注诚实） |
+| Ollama | 分平台安装 + 三行跑通 + 模型生态 |
+| ripgrep / fzf | 无文档站时 README 即文档 + 基准对比表 |
+| PocketBase | 一句话特性列表 + WARNING 边界声明 |
+| Immich | 功能矩阵表（功能×平台）+ demo 凭据 |
+| Pake | 按用户角色分流 + 热门成品包展示 |
+| ant-design | 组件库四件套（环境/安装/使用/链接） |
+
+## 边界
+
+- 代码本身的文档注释、API reference 生成、Wiki/文档站搭建不在本 skill 范围；README 只负责链接到它们。
+- 不修改用户代码；只动 README/描述/topics/社区健康文件（LICENSE、CONTRIBUTING、CODE_OF_CONDUCT、
+  SECURITY —— 这些是 GitHub Community Profile 的检查项，审查时顺带核一遍存在性）。
