@@ -1,0 +1,49 @@
+name: ✨ Rule change / feature
+description: Propose a new rule, template, or checklist item
+labels: [enhancement]
+body:
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight
+      options:
+        - label: I have searched the existing issues, both open and closed.
+          required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What gap does this address?
+      description: Which real facade pattern is currently mishandled or missing from the standard?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: The rule as you'd write it
+      description: One actionable sentence, the way rules read in references/.
+      placeholder: "Every badge must be wrapped in a link — 41/41 sample badges are."
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Which repository(ies) or official doc demonstrate it? Rules land only with evidence — link the README, file path, or docs page.
+      placeholder: |
+        e.g. https://github.com/vitejs/vite README L1-10 — badge row above the H1
+        e.g. https://docs.github.com/... — official rule
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Which section?
+      options:
+        - badges (E)
+        - hero / visuals (E)
+        - social preview (E)
+        - community files (F)
+        - issue / PR templates (G)
+        - releases / changelog (H)
+        - community entry & toggles (I)
+        - README structure (A–D)

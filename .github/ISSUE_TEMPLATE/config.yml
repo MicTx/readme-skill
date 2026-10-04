@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Questions & ideas
+    url: https://github.com/MicTx/repo-readme-skill/discussions/categories/q-a
+    about: Usage questions and loose ideas belong in Discussions — issues are for bugs and concrete rule changes.

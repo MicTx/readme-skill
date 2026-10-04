@@ -1,0 +1,63 @@
+name: 🐛 Bug report
+description: The audit script or a rule behaves incorrectly
+labels: [pending triage]
+body:
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight
+      options:
+        - label: I have searched the existing issues, both open and closed.
+          required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part?
+      options:
+        - scripts/audit.py — local README mode
+        - scripts/audit.py --repo facade mode
+        - scripts/fetch_corpus.py
+        - a rule in references/
+        - SKILL.md workflow
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you ran, what you expected, what happened instead. Chinese or English both fine.
+      placeholder: |
+        command: python3 scripts/audit.py README.md --repo owner/name
+        expected: …
+        actual: …
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output
+      description: Paste the full output; redact anything private before submitting.
+      render: shell
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Which release tag or commit? Run `git log -1 --format=%h` inside your copy of the skill.
+      placeholder: v0.2.0 (or a short commit SHA)
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: OS
+      multiple: true
+      options:
+        - macOS
+        - Linux
+        - Windows
+  - type: input
+    id: runtime
+    attributes:
+      label: Agent runtime (if used as a skill)
+      description: e.g. Claude Code, ZCode, Codex CLI, Cursor — skip if you ran the script directly.

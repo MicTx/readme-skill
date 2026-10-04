@@ -3,3 +3,5 @@ corpus/
 __pycache__/
 *.pyc
 .DS_Store
+# local agent state, never commit
+.zcode/
