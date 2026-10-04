@@ -4,7 +4,7 @@
 
 以 agent skill 形式交付：既能体检现有仓库门面，也能写出「像 React / Vite / FastAPI / Ollama 团队亲手写的」新门面。
 
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/license-CC%20BY--NC%204.0-blue)](LICENSE) [![Release](https://img.shields.io/badge/release-v0.2.0-blue)](https://github.com/MicTx/readme-skill/releases) · [English](README.md)
+[![License: AGPL v3](https://img.shields.io/badge/license-AGPL%20v3-blue)](LICENSE) [![Release](https://img.shields.io/badge/release-v0.2.0-blue)](https://github.com/MicTx/readme-skill/releases) · [English](README.md)
 
 ## 为什么做这个
 
@@ -95,4 +95,4 @@ python3 scripts/fetch_corpus.py   # 输出到 corpus/
 
 ## 许可证
 
-[CC BY-NC 4.0](LICENSE)——个人与非商业使用免费，需署名。12 篇范本 README 版权归各自项目。
+[AGPL-3.0](LICENSE)——可自由使用与修改（含商用），衍生品与网络服务必须开源。12 篇范本 README 版权归各自项目。

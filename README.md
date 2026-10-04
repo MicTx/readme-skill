@@ -4,7 +4,7 @@
 
 Ships as an agent skill: audit an existing repo facade or write a new one that reads like it was written by the React / Vite / FastAPI / Ollama teams.
 
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/license-CC%20BY--NC%204.0-blue)](LICENSE) [![Release](https://img.shields.io/badge/release-v0.2.0-blue)](https://github.com/MicTx/readme-skill/releases) · [简体中文](README.zh-CN.md)
+[![License: AGPL v3](https://img.shields.io/badge/license-AGPL%20v3-blue)](LICENSE) [![Release](https://img.shields.io/badge/release-v0.2.0-blue)](https://github.com/MicTx/readme-skill/releases) · [简体中文](README.zh-CN.md)
 
 ## Why
 
@@ -96,4 +96,4 @@ The audit scripts run locally and call the GitHub API read-only — if you spot 
 
 ## License
 
-[CC BY-NC 4.0](LICENSE) — free for personal and non-commercial use, attribution required. The 12 sample READMEs remain the property of their respective projects.
+[AGPL-3.0](LICENSE) — free to use and modify, including commercially; derivatives and network deployments must share their source. The 12 sample READMEs remain the property of their respective projects.
