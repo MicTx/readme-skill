@@ -1,10 +1,10 @@
-# Contributing to repo-readme-skill
+# Contributing to readme-skill
 
 Thanks for helping the standard get sharper. This repo is distilled evidence about how top-tier repositories present themselves — the best contributions keep it that way.
 
 ## Finding work
 
-Browse [open issues](https://github.com/MicTx/repo-readme-skill/issues). Bug reports land with the `pending triage` label first; rule-change proposals are `enhancement`.
+Browse [open issues](https://github.com/MicTx/readme-skill/issues). Bug reports land with the `pending triage` label first; rule-change proposals are `enhancement`.
 
 ## Ground rule: evidence or it didn't happen
 
@@ -15,9 +15,9 @@ Every rule in `references/` carries an evidence tag — [官方] (official GitHu
 Python 3 only, no dependencies:
 
 ```bash
-git clone https://github.com/MicTx/repo-readme-skill.git
-cd repo-readme-skill
-python3 scripts/audit.py README.md --name MicTx/repo-readme-skill --root .   # should exit 0
+git clone https://github.com/MicTx/readme-skill.git
+cd readme-skill
+python3 scripts/audit.py README.md --name MicTx/readme-skill --root .   # should exit 0
 ```
 
 Optional offline corpus (12 full sample READMEs + facade metadata; gitignored, never redistribute):

@@ -4,7 +4,7 @@
 
 Please report vulnerabilities **privately** — do not open a public issue:
 
-- Preferred: GitHub's private vulnerability reporting — the **Report a vulnerability** button on the [security advisories page](https://github.com/MicTx/repo-readme-skill/security/advisories).
+- Preferred: GitHub's private vulnerability reporting — the **Report a vulnerability** button on the [security advisories page](https://github.com/MicTx/readme-skill/security/advisories).
 - Or email **dawudcn@qq.com** with `[security]` in the subject.
 
 Response is best-effort, usually within a few weeks. This is a docs-and-scripts side project, not a service — no SLA.
@@ -23,4 +23,4 @@ Out of scope:
 
 ## Supported versions
 
-The latest [release](https://github.com/MicTx/repo-readme-skill/releases) only.
+The latest [release](https://github.com/MicTx/readme-skill/releases) only.

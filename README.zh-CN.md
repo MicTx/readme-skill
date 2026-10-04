@@ -1,10 +1,10 @@
-# repo-readme-skill
+# readme-skill
 
 **从 12 个 T0 级开源仓库蒸馏出的 GitHub 门面全套规范——从 README 到 releases。**
 
 以 agent skill 形式交付：既能体检现有仓库门面，也能写出「像 React / Vite / FastAPI / Ollama 团队亲手写的」新门面。
 
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/license-CC%20BY--NC%204.0-blue)](LICENSE) [![Release](https://img.shields.io/badge/release-v0.2.0-blue)](https://github.com/MicTx/repo-readme-skill/releases) · [English](README.md)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/license-CC%20BY--NC%204.0-blue)](LICENSE) [![Release](https://img.shields.io/badge/release-v0.2.0-blue)](https://github.com/MicTx/readme-skill/releases) · [English](README.md)
 
 ## 为什么做这个
 
@@ -15,7 +15,7 @@
 ## 目录结构
 
 ```
-repo-readme-skill/
+readme-skill/
 ├── SKILL.md                          # skill 主体：工作流、硬规则、仓库类型判定
 ├── references/
 │   ├── description-topics.md         # 描述六句式 + topics 五层配方
@@ -43,9 +43,9 @@ repo-readme-skill/
 ## 安装（作为 agent skill）
 
 ```bash
-git clone https://github.com/MicTx/repo-readme-skill.git
+git clone https://github.com/MicTx/readme-skill.git
 mkdir -p ~/.agents/skills
-cp -R repo-readme-skill ~/.agents/skills/
+cp -R readme-skill ~/.agents/skills/
 ```
 
 然后对 agent 说「按规范体检这个 README」「帮我重写仓库描述」即可；也可直接跑审计脚本：

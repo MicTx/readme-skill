@@ -15,7 +15,7 @@
 - [ ] Docs updated in both `README.md` and `README.zh-CN.md` (or N/A)
 - [ ] New/changed rules carry an evidence tag（[官方]/[共识]/[分布]/[个例]）with a source link
 - [ ] No sample README text copied verbatim into the repo (copyright stays with each project)
-- [ ] `python3 scripts/audit.py README.md --name MicTx/repo-readme-skill --root .` exits 0
+- [ ] `python3 scripts/audit.py README.md --name MicTx/readme-skill --root .` exits 0
 
 ## AI assistance
 

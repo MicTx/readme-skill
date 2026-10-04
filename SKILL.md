@@ -1,5 +1,5 @@
 ---
-name: repo-readme-skill
+name: readme-skill
 description: >
   开源仓库门面全套规范：按 GitHub 官方规则 + T0 级仓库（React/Vite/FastAPI/Ollama/ripgrep/
   PocketBase/Immich 等 12 个范本）两轮蒸馏的写法标准，审查或撰写 README、仓库 About 描述、topics、
@@ -74,9 +74,9 @@ description: >
 ## 脚本检查（audit.py）
 
 ```bash
-python ~/.agents/skills/repo-readme-skill/scripts/audit.py <README路径> [--desc "About描述"] [--name 包名]
+python ~/.agents/skills/readme-skill/scripts/audit.py <README路径> [--desc "About描述"] [--name 包名]
 # 门面模式（gh 已登录时）：实测 About/topics/社区文件(含组织回退)/issue模板/发布线/social preview
-python ~/.agents/skills/repo-readme-skill/scripts/audit.py <README路径> --repo user/repo
+python ~/.agents/skills/readme-skill/scripts/audit.py <README路径> --repo user/repo
 ```
 
 输出 JSON：字数、首段长度、绝对链接、死链风险、`> `开头、缺失关键章节、badge 装饰层统计；

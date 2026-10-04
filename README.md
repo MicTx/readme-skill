@@ -1,10 +1,10 @@
-# repo-readme-skill
+# readme-skill
 
 **A distilled standard for the full GitHub repo facade — README to releases — learned from 12 top-tier OSS repos.**
 
 Ships as an agent skill: audit an existing repo facade or write a new one that reads like it was written by the React / Vite / FastAPI / Ollama teams.
 
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/license-CC%20BY--NC%204.0-blue)](LICENSE) [![Release](https://img.shields.io/badge/release-v0.2.0-blue)](https://github.com/MicTx/repo-readme-skill/releases) · [简体中文](README.zh-CN.md)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/license-CC%20BY--NC%204.0-blue)](LICENSE) [![Release](https://img.shields.io/badge/release-v0.2.0-blue)](https://github.com/MicTx/readme-skill/releases) · [简体中文](README.zh-CN.md)
 
 ## Why
 
@@ -15,7 +15,7 @@ A second distillation round (2026-10) extended coverage from README/About/topics
 ## What's inside
 
 ```
-repo-readme-skill/
+readme-skill/
 ├── SKILL.md                          # the skill: workflow, hard rules, repo-type detection
 ├── references/
 │   ├── description-topics.md         # 6 description formulas + 5-layer topics recipe
@@ -43,9 +43,9 @@ repo-readme-skill/
 ## Install (as an agent skill)
 
 ```bash
-git clone https://github.com/MicTx/repo-readme-skill.git
+git clone https://github.com/MicTx/readme-skill.git
 mkdir -p ~/.agents/skills
-cp -R repo-readme-skill ~/.agents/skills/
+cp -R readme-skill ~/.agents/skills/
 ```
 
 Then ask your agent things like "audit this repo's README" or "rewrite my About description" — or run the audit directly:

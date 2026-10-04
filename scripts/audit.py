@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""repo-readme-skill 审计脚本：对 README 做硬指标检查，可选门面模式。
+"""readme-skill 审计脚本：对 README 做硬指标检查，可选门面模式。
 
 用法:
     python audit.py <README路径> [--desc "GitHub About 描述"] [--name user/repo] [--root 仓库根目录]
@@ -236,7 +236,7 @@ def gh_raw(path: str) -> str | None:
 def social_preview_kind(name: str) -> str:
     """og:image 域名二分：custom=已设自定义分享卡 / default=默认动态卡 / ''=无法判定（网络失败或私有）。"""
     try:
-        req = urllib.request.Request(f"https://github.com/{name}", headers={"User-Agent": "repo-readme-skill-audit"})
+        req = urllib.request.Request(f"https://github.com/{name}", headers={"User-Agent": "readme-skill-audit"})
         html = urllib.request.urlopen(req, timeout=10).read(400_000).decode("utf-8", "replace")
     except Exception:
         return ""
