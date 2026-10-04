@@ -23,8 +23,14 @@ import urllib.request
 from pathlib import Path
 
 SHORT_DESC_MAX = 120   # standard-readme 短简介上限
+BILINGUAL_DESC_MAX = 200  # 中文为主双语（中文主句+English gloss）上限；纯英文仍 120
 TOC_THRESHOLD = 100    # 超过此行数建议有目录
 RENDER_LIMIT = 500 * 1024  # GitHub 渲染截断线
+
+
+def desc_limit(s: str) -> int:
+    """含 CJK 时按中文为主双语口径放宽到 200；纯 ASCII 维持 standard-readme 的 120。"""
+    return BILINGUAL_DESC_MAX if re.search(r"[\u4e00-\u9fff]", s) else SHORT_DESC_MAX
 
 # 绝对链接合法的 GitHub 页面（相对链接无法表达）
 GH_PAGE_WHITELIST = (
@@ -96,15 +102,18 @@ def check(path: Path, desc: str, name: str, root: Path | None) -> dict:
         hint("DESC_MISSING", "未找到短简介行（首个非标题、非徽章的段落）")
     else:
         plain_len = len(re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", first))
-        if plain_len > SHORT_DESC_MAX:
-            hint("DESC_LONG", f"短简介纯文本 {plain_len} 字符 > {SHORT_DESC_MAX}（standard-readme 上限）",
+        limit = desc_limit(first)
+        if plain_len > limit:
+            hint("DESC_LONG", f"短简介纯文本 {plain_len} 字符 > {limit}"
+                 f"（纯英文 {SHORT_DESC_MAX}；中文为主双语 {BILINGUAL_DESC_MAX}）",
                  current=first)
 
     # 三处一致（同义即可，按词重叠判断）
     if desc:
         report["info"]["about_desc"] = desc
-        if len(desc) > SHORT_DESC_MAX:
-            hint("ABOUT_LONG", f"About 描述 {len(desc)} 字符 > {SHORT_DESC_MAX}（网页端约 350 字符硬限）")
+        dlimit = desc_limit(desc)
+        if len(desc) > dlimit:
+            hint("ABOUT_LONG", f"About 描述 {len(desc)} 字符 > {dlimit}（网页端约 350 字符硬限）")
         if first:
             ov = word_overlap(desc, first)
             report["info"]["desc_overlap_words"] = sorted(ov)
@@ -274,8 +283,8 @@ def facade_check(repo: str, meta: dict) -> tuple[list, list, dict]:
     info["about_desc"] = desc
     if not desc:
         hint("ABOUT_MISSING", "About 描述为空——T0 全部有 35–120 字符描述（含品类词+差异化定语）")
-    elif len(desc) > SHORT_DESC_MAX:
-        hint("ABOUT_LONG", f"About 描述 {len(desc)} 字符 > {SHORT_DESC_MAX}")
+    elif len(desc) > desc_limit(desc):
+        hint("ABOUT_LONG", f"About 描述 {len(desc)} 字符超限（纯英文 {SHORT_DESC_MAX} / 中文为主双语 {BILINGUAL_DESC_MAX}）")
     info["homepage"] = meta.get("homepage")
     info["has_discussions"] = meta.get("has_discussions")
     info["has_wiki"] = meta.get("has_wiki")

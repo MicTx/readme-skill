@@ -43,7 +43,7 @@
 | D1 | 无空洞形容词 | 禁「强大的/革命性的/best/revolutionary」——特性靠机制说明 |
 | D2 | 无营销腔 | 「open source」不写在描述里（开源是默认假设）；团队自夸句删除 |
 | D3 | 面向用户动线不面向模块 | Getting Started 按角色/场景分流（Pake 式），不按代码结构 |
-| D4 | 中文项目的语言策略 | 默认 README.md 英文 + README.zh-CN.md，顶部互链；About 用英文 |
+| D4 | 中文项目的语言策略 | 英文为主：README.md 英文 + README.zh-CN.md 互链，About 英文；中文为主：README.md 中文 + README.en.md 互链，About「中文主句（English gloss）」 |
 
 ## E. 装饰层：badges 与首屏视觉（依据 facade-decor.md §一–三）
 

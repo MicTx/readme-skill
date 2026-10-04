@@ -29,7 +29,7 @@ python3 scripts/fetch_corpus.py   # requires gh CLI authenticated
 ## Pull requests
 
 - Fill in the PR template — the verification section wants an `audit.py` before/after delta for rule or script changes.
-- Keep the bilingual pair in sync: `README.md` and `README.zh-CN.md` change together (same for the checklist if both halves of a section are affected).
+- Keep the bilingual pair in sync: `README.md` (Chinese-primary) and `README.en.md` change together (same for the checklist if both halves of a section are affected).
 - Commit messages follow [Conventional Commits](https://www.conventionalcommits.org/) (`docs(rules): ...`, `fix(audit): ...`).
 - Never paste sample README text verbatim into this repo — paraphrase the pattern, link the source.
 

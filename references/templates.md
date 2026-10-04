@@ -75,7 +75,8 @@
 
 ## 双语 README 策略（Pake、Immich 实证）
 
-- 主 `README.md` 用英文；中文版 `README.zh-CN.md`，其他语言 `README.<BCP47>.md` 放 `readme_i18n/`（Immich）或根目录（Pake 的 README_CN.md）
+- **英文为主**（默认，国际受众）：主 `README.md` 用英文；中文版 `README.zh-CN.md`，其他语言 `README.<BCP47>.md` 放 `readme_i18n/`（Immich）或根目录（Pake 的 README_CN.md）
+- **中文为主**（中文社区受众优先）：主 `README.md` 用中文；英文版 `README.en.md`。standard-readme 要求英文占主名，此式是自觉取舍——写给谁就把主名给谁
 - 顶部互链行：`English | 简体中文`（Pake 把当前语言加粗，其余为链接）
 - 两版本结构一致，中文版可省略赞助区
 

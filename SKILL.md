@@ -56,9 +56,13 @@ description: >
 
 - 审查报告：每条问题附「证据（原文引用）→ 为什么违反 → 具体改法（给出改后文案）」。
 - 新文档：直接给出完整可粘贴的 Markdown/描述文案，不要只给"建议加上 XX"。
-- 中文项目的 README：默认双语策略——`README.md` 英文（standard-readme 规定英文占主名）+
-  `README.zh-CN.md`，顶部互链（参考 Pake/Immich 的语言切换行）。用户明确只要中文时可用
-  `README.md` 单文件中文，但 About 描述仍建议英文。
+- 中文项目的双语策略，按目标受众二选一：
+  - **英文为主**（默认，国际受众）：`README.md` 英文（standard-readme 规定英文占主名）+
+    `README.zh-CN.md`，顶部互链（参考 Pake/Immich 的语言切换行）；About 用英文。
+  - **中文为主**（中文社区受众优先）：`README.md` 中文主文件 + `README.en.md`，顶部互链；
+    About 用「中文主句（English gloss）」一栏式——中文主句 ≤ 60 字且必含品类词，
+    双语合计 ≤ 200 字符。此式自觉偏离 standard-readme 的英文主名约定：写给谁，主名就给谁。
+  两版结构保持一致；用户明确只要单语时可用 `README.md` 单文件。
 
 ## 硬性规则（GitHub 官方，违反会实际出问题）
 
