@@ -83,6 +83,8 @@ hero 默认抄居中模板（7/10 范本形态）：
 
 ## 三、social preview（分享卡）
 
+**可选装饰项，不是强制要求**：T0 范本仅 6/10 设置，未设时 GitHub 自动生成默认动态卡，审查不判问题、不扣分；以下规格约束的是「决定设置时」的做法。
+
 [官方](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview)：
 
 - 格式 PNG/JPG/GIF，**<1 MB**；至少 640×320，**最佳 1280×640（2:1）**；支持透明 PNG（注意深色模式平台）。

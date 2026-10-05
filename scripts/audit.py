@@ -396,7 +396,7 @@ def facade_check(repo: str, meta: dict) -> tuple[list, list, dict]:
         kind = social_preview_kind(repo)
         info["social_preview"] = kind
         if kind == "default":
-            hint("SOCIAL_PREVIEW_DEFAULT", "未设自定义 social preview（T0 6/10 已设；建议 1280×640 PNG <1MB，Settings → Social preview 上传）")
+            hint("SOCIAL_PREVIEW_DEFAULT", "未设自定义 social preview（可选装饰非强制，T0 6/10 已设；要设：1280×640 PNG <1MB，Settings → Social preview 上传）")
 
     return errs, hints, info
 

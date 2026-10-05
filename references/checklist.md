@@ -52,7 +52,7 @@
 | E1 | badge 质量 | 全部包链接（41/41 无裸图）；样式全 README 统一；单行 ≤6，超出拆健康度/社区两行；vanity 不排在 CI/版本前 | 9 仓 41 badge 观测 |
 | E2 | hero 结构 | 居中模板：logo（带尺寸、包官网链接）→ 标题 → 一句话（前 10 行内必现）→ badge 行 | 7/10 居中 hero |
 | E3 | 视觉资产按类型分派 | 纯库不硬凑截图（logo+代码即视觉）；CLI 首屏终端 PNG；应用/组件库首屏主截图；安装型给终端块 | 3/3 库零截图 |
-| E4 | social preview 已设 | 1280×640 PNG <1MB；Settings → Social preview；og:image 域名二分可外部验证 | 6/10 已设 + 官方规则 |
+| E4 | social preview（可选，未设不判问题） | 已设才核规格：1280×640 PNG <1MB；Settings → Social preview；og:image 域名二分可外部验证 | 6/10 已设（非强制）+ 官方规则 |
 
 ## F. 社区健康文件内容级（依据 facade-decor.md §四；存在性在 A6）
 

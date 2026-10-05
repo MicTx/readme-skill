@@ -71,7 +71,7 @@ description: >
 - topics：仅小写字母/数字/连字符，单个 ≤ 50 字符，每仓库 ≤ 20 个；**私有仓库的 topics 也是公开的**
 - 短简介（About 与 README 首段）< 120 字符，独占一行，不以 `> ` 开头
 - README 超过 100 行应有目录（standard-readme）；GitHub 会按标题自动生成大纲
-- social preview：PNG/JPG/GIF < 1 MB，至少 640×320（最佳 1280×640），Settings → Social preview 上传，仅公开仓库可分享
+- social preview 是可选装饰，未设不算问题（T0 范本 6/10 已设，未设时 GitHub 自动生成默认卡）；设了才受官方格式约束：PNG/JPG/GIF < 1 MB，至少 640×320（最佳 1280×640），Settings → Social preview 上传，仅公开仓库可分享
 - FUNDING.yml 只在 `.github/` 生效，key 限 12 个白名单；组织 profile README 只在 `{org}/.github` 仓库的 `profile/README.md` 生效（根 README 不生效）
 - API 陷阱：community profile 的 `files.issue_template` 对目录式模板恒为 null（须列 `.github/ISSUE_TEMPLATE/` 目录）；`files` 键恒在、值为 null 才是缺失；GitHub 会把 `{org}/.github` 回退文件计入 profile（以 html_url 判实际位置）
 
